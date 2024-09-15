@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Menabo</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <ul class="menus-ensemble">
+    <li title="home"><a href="#" class="menu-bouton home">menu</a></li>
+    <li title="titre"><a href="#" class="titre">titre</a></li>
+    <li title="format"><a href="#" class="format">format</a></li>
+    <li title="pages"><a href="#" class="pages">pages</a></li>
+    <li title="reliure"><a href="#" class="active reliure">reliure</a></li>
+    <li title="jaquette"><a href="#" class="jaquette">jaquette</a></li>
+    <li title="bandeau"><a href="#" class="bandeau">bandeau</a></li>
+  </ul>
+
+  <div class="menu-barre">
+    <ul>
+      <li><a href="#" class="menu-button">Menu</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Editorial</a></li>
+      <li><a href="#">reliure</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-base menu-home" aria-label="Menu-home">
+  
+  
+      <div class="menu-home">
+        <ul>
+          <li><a href="#" class="menu-button">Menu</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">reliure</a></li>
+        </ul>
+      </div>
+  
+    <!-- Contenu du menu-home -->
+
+
+
+
+
+  </div>
+
+  <div class="menu-base menu-format" aria-label="Menu-format">
+    <div class="input-group">
+      <div class="input-container">
+        <input type="number" class="input-mm" id="largeur" name="largX" placeholder="210"
+          value="<?php echo htmlspecialchars($largX); ?>">
+        <img src="/images/link_off.svg" alt="Unlink" class="icon-button2">
+        <input type="number" class="input-mm" id="hauteur" name="hautX" placeholder="297"
+          value="<?php echo htmlspecialchars($hautX); ?>">
+      </div>
+    </div>
+    <p class="description">À la française :</p>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="dicton">
+        déterminer choix
+      </label>
+    </div>
+  </div>
+
+  <div class="menu-base menu-reliure" aria-label="Menu-reliure">
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" name="Rel_carton" aria-label="Cartonato">
+        Cartonato
+      </label>
+      <label>
+        <input type="checkbox" name="Rel-Broche" aria-label="Brossura">
+        Brossura
+      </label>
+      <label>
+        <input type="checkbox" name="Rel-metal" aria-label="Punto metallico">
+        Punto metallico
+      </label>
+      <label>
+        <input type="checkbox" name="Hollandaise" aria-label="Olandese">
+        Olandese
+      </label>
+    </div>
+  </div>
+
+  <div class="menu-base menu-jaquette" aria-label="Menu-jaquette">
+    <!-- Contenu du menu-jaquette -->
+  </div>
+
+  <div class="menu-base menu-bandeau" aria-label="Menu-bandeau">
+    <!-- Contenu du menu-bandeau -->
+  </div>
+
+  <script src="./scriptNew.js"></script>
+</body>
+
+</html>

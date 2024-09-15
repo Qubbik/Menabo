@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menus-ensemble {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  z-index: 10;
+  overflow: hidden;
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+}
+
+.menus-ensemble li a {
+  display: block;
+  text-indent: -500em;
+  height: 5em;
+  width: 3em;
+  line-height: 5em;
+  text-align: center;
+  color: #72739f;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.1s ease-in-out;
+}
+
+.menus-ensemble li a:before {
+  font-family: 'Material Icons';
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+}
+
+.menus-ensemble li a.menu-bouton:before {
+  content: "menu";
+}
+
+.menus-ensemble li a.titre:before {
+  content: "title";
+}
+
+.menus-ensemble li a.format:before {
+  content: "square_foot";
+}
+
+.menus-ensemble li a.pages:before {
+  content: "auto_stories";
+}
+
+.menus-ensemble li a.reliure:before {
+  content: "book_2";
+}
+
+.menus-ensemble li a.jaquette:before {
+  content: "wrap_text";
+}
+
+.menus-ensemble li a.bandeau:before {
+  content: "crop_16_9";
+}
+
+.menus-ensemble li a:hover,
+.menus-ensemble li:first-child a {
+  background: #01d008;
+  color: #fff;
+}
+
+.menu-base {
+  position: fixed;
+  top: 0;
+  left: 3em;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  background: #333;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.menu-base>div {
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.menu-base ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-base li a {
+  display: block;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-family: verdana;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.1s ease-in-out;
+}
+
+.menu-base li:first-child a {
+  height: 5em;
+  background: #267fdd;
+  color: #fff;
+  line-height: 5em;
+}
+
+.menu-base li::before {
+  display: none;
+}
+
+.menu-base.open {
+  width: 250px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-mm {
+  margin-right: 10px;
+}
+
+.icon-button2 {
+  margin: 0 10px;
+}
+
+@media all and (max-width: 500px) {
+  .menus-ensemble {
+    height: 5em;
+    width: 100%;
+  }
+
+  .menus-ensemble li {
+    display: inline-block;
+    float: left;
+  }
+
+  .menu-base {
+    width: 100%;
+    left: 0;
+    top: 5em;
+    height: calc(100% - 5em);
+  }
+
+  .menu-base.open {
+    width: 100%;
+    height: calc(100% - 5em);
+  }
+}
+
+@media screen and (max-height: 34em) {
+
+  .menus-ensemble li,
+  .menu-base {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-height: 34em) and (max-width: 500px) {
+  .menus-ensemble {
+    height: 3.5em;
+  }
+}
